@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zxx">
+   <head>
+      <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keyword" content="">
+      <meta name="author"  content=""/>
+      <!-- Page Title -->
+      <title>Soteria Manager</title>
+      <!-- Main CSS -->			
+      <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.css">
+    <!-- Our Custom CSS -->
+      <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="assets/css/customScrollbar.css">
+    <!-- Font Awesome JS -->
+      <script defer src="assets/js/solid.js"></script>
+      <script defer src="assets/js/fontawesome.js"></script>
+    <!--Icon-->
+      <link type="text/css" rel="stylesheet" href="assets/plugin/ionicons/css/ionicons.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <link type="text/css" rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.css"/>
+      <link type="text/css" rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css"/>
+      <link type="text/css" rel="stylesheet" href="assets/plugins/flag-icon/flag-icon.min.css"/>
+      <link type="text/css" rel="stylesheet" href="assets/plugins/simple-line-icons/css/simple-line-icons.css">
+      
+      <link type="text/css" rel="stylesheet" href="assets/plugins/ionicons/css/ionicons.css">
+      <link type="text/css" rel="stylesheet" href="assets/plugins/toastr/toastr.min.css">
+      <link type="text/css" rel="stylesheet" href="assets/plugins/chartist/chartist.css">
+      <link type="text/css" rel="stylesheet" href="assets/plugins/apex-chart/apexcharts.css">
+      <link type="text/css" rel="stylesheet" href="assets/css/app.min.css"/>
+      <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+      <!-- Favicon -->	
+      <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn"t work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <!--================================-->
+      <!-- Page Container Start -->
+      <!--================================-->
+      <div>
+         <!--================================-->
+         <!-- Page Sidebar Start -->
+         <!--================================-->
+         <div class="wrapper">
+               <!-- Sidebar  -->
+               <nav id="sidebar">
+                   <div class="sidebar-header">
+                       <a class="side-menu" href="/"><img class="sidebar-logo" src="assets/images/small-logo.png" alt=""></a> <!--White logo 부분-->
+                   </div>
+       
+                   <ul class="list-unstyled components">
+                       <li>
+                           <a class="side-menu"href="#"><img class="sidebar_icon" src="assets/images/dashboard.svg" alt="대시보드 이미지">대시보드</a><!--HOME 화면과 동일-->
+                       </li>
+                       
+                       <li>
+                           <a class="side-menu" href="#user_ano" data-toggle="collapse" aria-expanded="false"><img class="sidebar_icon" src="assets/images/2.svg" alt="이상징후 이미지" style="max-width: 2rem!important; margin-right: 0.7rem;">이상징후<i class="fas fa-angle-left sidebar_icon-1"></i></a>
+                           <ul class="collapse list-unstyled" id="user_ano">
+                               <li>
+                                   <a href="#">Neurotron AI</a>
+                               </li>
+                               <li>
+                                   <a href="#">Syslog</a>
+                               </li>
+                           </ul>
+                       </li>
+                       <li >
+                           <a class="side-menu" href="#"><img class="sidebar_icon" src="assets/images/report.svg" alt="리포트 이미지">리포트</a>
+                       </li>
+                       <li>
+                          <a class="side-menu" href="#user_sett" data-toggle="collapse" aria-expanded="false"><img class="sidebar_icon"  src="assets/images/74.svg" alt="설정 이미지">설정<i class="fas fa-angle-left sidebar_icon-1"></i></a>
+                               <ul class="collapse list-unstyled" id="user_sett">
+                                   <li>
+                                       <a href="#">사용자 설정</a>
+                                   </li>
+                                   <li>
+                                       <a href="#">SBB 설정</a>
+                                   </li>
+                                   <li>
+                                       <a href="#">알람 설정</a>
+                                   </li>
+                               </ul>
+                           </li>
+                      
+                       
+                   </ul>
+                   
+               </nav>
+         
+     
+         <div class="page-content">
+            <!--================================-->
+            <!-- Page Header Start -->
+            <!--================================-->
+            
+       
+            <div id="content">
+              
+               <!--================================-->
+               <!-- Page Header  Start -->
+               <!--================================-->
+               <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                     <button type="button" id="sidebarCollapse" class="btn btn-info">
+                           <i class="fas fa-align-justify"></i>
+                       </button>
+                  
+                  
+                  <!-- Header Right Start -->
+                  <!--================================-->
+                  <div class="header-right pull-right">
+                     <ul class="list-inline justify-content-end">
+                       
+                        <!--================================-->
+                        <!-- Languages Dropdown Start -->
+                        <!--================================-->
+                        <li class="list-inline-item align-middle dropdown hidden-xs">
+                           <a  href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <i class="flag-icon flag-icon-kr"></i>
+                           </a>
+                           <ul class="dropdown-menu languages-dropdown shadow-2">
+                              <li>
+                                 <a href="" data-lang="es"><i class="flag-icon flag-icon-kr mr-2"></i><span>Korea</span></a>
+                              </li>
+                              <li>
+                                 <a href="" data-lang="en"><i class="flag-icon flag-icon-us mr-2"></i><span>English-US</span></a>
+                              </li>
+                              </li>
+                           </ul>
+                        </li>
+                        <!--/ Languages Dropdown End -->
+                        <!--================================-->
+                        <!-- Notifications Dropdown Start -->
+                        <!--================================-->
+                        <li class="list-inline-item dropdown hidden-xs">
+                           <a class="notification-icon" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <i class="icon-bell tx-16"></i>
+                           <span class="notification-count wave in"></span>
+                           </a>
+                           <div class="dropdown-menu dropdown-menu-right shadow-2">
+                              <!-- Top Notifications Area -->
+                              <div class="top-notifications-area">
+                                 <!-- Heading -->
+                                 <div class="notifications-heading">
+                                    <div class="heading-title">
+                                       <h6>Notifications</h6>
+                                    </div>
+                                    <span>5+ New Notifications</span>
+                                 </div>
+                                 <div class="notifications-box" id="notificationsBox">
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-success">
+                                             <i class="fa fa-smile-o tx-success tx-16"></i>
+                                          </div>
+                                          <div>
+                                             <span>Your order is placed</span>
+                                             <span class="small tx-gray-600 ft-right">Jun 10</span>
+                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-warning">
+                                             <i class="fa fa-bell tx-warning tx-16"></i>
+                                          </div>
+                                          <div>
+                                             <span>Your item is shipped</span>
+                                             <span class="small tx-gray-600 ft-right">Jun 05</span>
+                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-success">
+                                             <i class="fa fa-check tx-success tx-16"></i>
+                                          </div>
+                                          <div>
+                                             <span>New Message received</span>
+                                             <span class="small tx-gray-600 ft-right">Jun 02</span>
+                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-danger">
+                                             <i class="fa fa-heartbeat tx-danger tx-16"></i>
+                                          </div>
+                                          <div>
+                                             <span>Payment failed!</span>
+                                             <span class="small tx-gray-600 ft-right">May 29</span>
+                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-primary">
+                                             <i class="fa fa-info tx-info tx-16"></i>
+                                          </div>
+                                          <div>
+                                             <span>New document available</span>
+                                             <span class="small tx-gray-600 ft-right">May 25</span>
+                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-primary">
+                                             <i class="fa fa-info tx-info tx-16"></i>
+                                          </div>
+                                          <div>
+                                             <span>New document available</span>
+                                             <span class="small tx-gray-600 ft-right">May 08</span>
+                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <div class="notifications-footer">
+                                    <a href="">View all Notifications</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                       
+                        <!-- Profile Dropdown Start -->
+                        <!--================================-->
+                        <nav id="sidebar_sbb">
+            
+           
+                              <ul class="list-unstyled components">
+                                  <h4>홍길동님, 안녕하세요</h4>
+                                  <p>현재 SSWEV1002에 접속중</p>
+                              </ul>
+                              <table>
+                                 <tr>
+                                     <td>ww</td>
+                                     <td>ww</td>
+                                     <td>dv</td>
+                                     <td>e</td>
+                                 </tr>
+                              </table>
+                  
+                  
+                  
+                          </nav>
+                        
+                     </ul>
+                  </div>
+
+
+                  <!--/ Header Right End -->
+               </nav>
+            </div>
+            <!-- Contents 들어갈 장소--->
+            
+            
+            
+            
+            
+          
+            
+            <!--Footer-->
+            <footer class="page-footer">
+               <div class="pd-t-4 pd-b-0 pd-x-20">
+                  <div class="tx-10 tx-uppercase">
+                     <p class="pd-y-10 mb-0">Copyright&copy; 2019 | All rights reserved. | Soteria.,llc</a></p>
+                  </div>
+               </div>
+            </footer>
+         </div>
+ 
+      </div>
+      
+      <!-- Scroll To Top Start-->
+      <!--================================-->	
+      
+      </div>
+     
+     
+      <!-- Right Side Bar (SBB List) -->
+      <!--================================-->	  
+      <div class="setting-sidebar_1" id="demoSettingSidebar">
+         <div class="wrapper" id="demoSettingSidebarScroll">
+            <a class="demo-settings-icon" id="demoSettingSidebarTrigger" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S<br>B<br>B</a>	
+            <nav id="sidebar_sbb">
+                  
+                 
+                  <ul class="list-unstyled components">
+                      <h4>홍길동님, 안녕하세요</h4>
+                      <p>현재 SSWEV1002에 접속중</p>
+                  </ul>
+                  <table>
+                     <tr>
+                         <td>ww</td>
+                         <td>ww</td>
+                         <td>dv</td>
+                         <td>e</td>
+                     </tr>
+                  </table>
+      
+      
+      
+              </nav>	
+                     
+                   
+         </div>
+      </div>
+   
+      <!-- Footer Script -->
+      <!--================================-->
+      <script src="assets/plugins/jquery/jquery.min.js"></script>
+      <script src="assets/plugins/jquery-ui/jquery-ui.js"></script>
+      <script src="assets/plugins/popper/popper.js"></script>
+      <script src="assets/plugins/feather-icon/feather.min.js"></script>
+      <script src="assets/css/bootstrap/js/bootstrap.js"></script>
+      <script src="assets/plugins/pace/pace.min.js"></script>
+      <!--<script src="assets/plugins/toastr/toastr.min.js"></script>-->
+      <script src="assets/plugins/countup/counterup.min.js"></script>		
+      <script src="assets/plugins/waypoints/waypoints.min.js"></script>
+      <script src="assets/plugins/chartjs/chartjs.js"></script>
+      <script src="assets/plugins/apex-chart/apexcharts.min.js"></script>
+      <script src="assets/plugins/apex-chart/irregular-data-series.js"></script>
+      <!--SBB 알람 확인 total data 넣는곳  -->
+       <script src="assets/plugins/apex-chart/apex-sample.min.js"></script>
+       <script src="assets/js/dashboard/helpdesk-dashboard-init.js"></script> 
+      <!--Top10 SBB Detection 현황 넣는곳  -->
+       <!-- <script src="assets/js/dashboard/education-dashboard-init.js"></script> -->
+      <script src="assets/plugins/popper/popper.js"></script>
+      <script src="assets/plugins/simpler-sidebar/jquery.simpler-sidebar.min.js"></script>	   
+      <script src="assets/js/dashboard/sales-dashboard-init.js"></script>
+      <script src="assets/js/jquery.slimscroll.min.js"></script>
+      <script src="assets/js/highlight.min.js"></script>
+      <script src="assets/js/app.js"></script>
+      <script src="assets/js/custom.js"></script>
+      <script src="assets/js/jquery.mCustomScrollbar.js"></script>
+
+
+      <script type="text/javascript">
+         $(document).ready(function () {
+             $("#sidebar").mCustomScrollbar({
+                 theme: "minimal"
+             });
+ 
+             $('#sidebarCollapse').on('click', function () {
+                 $('#sidebar, #content').toggleClass('active');
+                 $('.collapse.in').toggleClass('in');
+                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+             });
+         });
+     </script>
+ 
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $("#sidebar_sbb").mCustomScrollbar({
+                 theme: "minimal"
+             });
+ 
+             $('#sidebarCollapse_sbb').on('click', function () {
+                 $('#sidebar_sbb').toggleClass('active');
+                 $('.collapse.in').toggleClass('in');
+                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+             });
+         });
+     </script>
+   </body>
+</html>
