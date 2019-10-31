@@ -1,0 +1,58 @@
+<script th:src="@{/script/js/moment-with-locales.min.js}"></script>
+<script th:src="@{/assets/plugins/jquery/jquery.min.js}"></script>
+<script th:src="@{/assets/plugins/jquery-ui/jquery-ui.js}"></script>
+<script th:src="@{/assets/plugins/popper/popper.js}"></script>
+<script th:src="@{/assets/plugins/feather-icon/feather.min.js}"></script>
+<script th:src="@{/assets/css/bootstrap/js/bootstrap.js}"></script>
+<script th:src="@{/assets/plugins/pace/pace.min.js}"></script>
+<!--<script th:src="@{/assets/plugins/toastr/toastr.min.js}"></script>-->
+<script th:src="@{/assets/plugins/countup/counterup.min.js}"></script>		
+<script th:src="@{/assets/plugins/waypoints/waypoints.min.js}"></script>
+<script th:src="@{/assets/plugins/chartjs/chartjs.js}"></script>
+<!-- <script th:src="@{/assets/plugins/apex-chart/apexcharts.min.js}"></script> -->
+<!-- <script th:src="@{/assets/plugins/apex-chart/irregular-data-series.js}"></script> -->
+<!--SBB 알람 확인 total data 넣는곳  -->
+ <!--<script th:src="@{/assets/plugins/apex-chart/apex-sample.min.js}"></script>-->
+<!--Top10 SBB Detection 현황 넣는곳  -->
+ <!-- <script th:src="@{/assets/js/dashboard/education-dashboard-init.js}"></script> -->
+<script th:src="@{/assets/plugins/popper/popper.js}"></script>
+<script th:src="@{/assets/plugins/simpler-sidebar/jquery.simpler-sidebar.min.js}"></script>	   
+<script th:src="@{/assets/js/jquery.slimscroll.min.js}"></script>
+<script th:src="@{/assets/js/highlight.min.js}"></script>
+<!--<script th:src="@{/assets/js/app.js}"></script>-->
+<script th:src="@{/assets/js/custom.js}"></script>
+<script th:src="@{/assets/js/jquery.mCustomScrollbar.js}"></script>
+<script defer th:src="@{/assets/js/solid.js}"></script>
+<script defer th:src="@{/assets/js/fontawesome.js}"></script>
+<script type="text/javascript" th:src="@{/script/bootstrap/js/bootstrap-datetimepicker.min.js}"></script>
+
+
+<script type="text/javascript">
+    
+	$(document).ready(function () {
+	    $("#sidebar").mCustomScrollbar({
+	        theme: "minimal"
+	    });
+	
+	    $('#sidebarCollapse').on('click', function () {
+	        $('#sidebar, #content').toggleClass('active');
+	        $('.collapse.in').toggleClass('in');
+	        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+	    });
+	});
+</script>
+
+<!-- <script type="text/javascript">
+         
+	$(document).ready(function() {
+		$("#sidebar_sbb").mCustomScrollbar({
+			theme : "minimal"
+		});
+
+		$('#sidebarCollapse_sbb').on('click', function() {
+			$('#sidebar_sbb').toggleClass('active');
+			$('.collapse.in').toggleClass('in');
+			$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+		});
+	});
+</script> —>

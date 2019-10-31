@@ -234,7 +234,7 @@ body {
 }
 
 .btn-custom-primary {
-	color: #764F71;
+	color: rgb(172, 130, 166);
 	background-color: #382035;
 	border-radius: 0;
 	text-transform: capitalize;
@@ -247,9 +247,9 @@ body {
 .btn-custom-primary:hover {
 	background-color: #382035;
 	color: #fff;
-	-webkit-box-shadow: 0 3px 3px #d49dcd;
-    -moz-box-shadow: 0 3px 3px #d49dcd;
-    box-shadow: 0 3px 3px #d49dcd;;
+	-webkit-box-shadow: 0 3px 3px rgb(172, 130, 166);
+    -moz-box-shadow: 0 3px 3px rgb(172, 130, 166);
+    box-shadow: 0 3px 3px  rgb(172, 130, 166);
 	border-radius: 20px;
 	text-decoration: none;
 	-webkit-transition: all 0.3s;
@@ -2619,17 +2619,22 @@ a.text-dark:hover {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 400;
 }
-
+.modal-content{
+  border:none!important;
+}
 .modal-title {
 	float: left;
+	color: #fff!important;
 }
 
-.modal-header h4.modal-title {
+.modal-header h2.modal-title {
 	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 300;
+	font-weight: 500;
+	opacity: 0.6!important;
 	float: left;
-	font-size: 20px;
+	font-size: 50px;
 	margin-top: -5px;
+	margin-bottom: -1.3rem;
 }
 
 .modal-body label {
@@ -2639,9 +2644,15 @@ a.text-dark:hover {
 
 .modal-header {
 	position: relative;
-	padding: 1.25rem 2.5625rem 1.25rem 1.5625rem;
+	padding: 1rem 2rem 0rem 2rem;
 	display: -ms-initial;
 	display: initial;
+	background: #382035;
+}
+
+
+.modal-dialog{
+	margin-top: 10%!important;
 }
 
 .sweet-alert .sa-icon.sa-error {
@@ -4320,8 +4331,40 @@ button:active {
 
 .btn-primary {
 	color: #fff;
-	background-color: #5d78ff;
-	border-color: #5d78ff;
+	background-color: #382035;
+	border-color: #382035;
+	border-radius: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.btn-primary:hover{
+	color: #fff;
+	background-color: #2b1828;
+	border-color: #2b1828;
+	border-radius: 10px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.btn-secondary{
+	border-radius: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.btn-secondary:hover{
+	border-radius: 10px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.modal-body p{
+	font-weight: 400!important;
 }
 
 button:focus,
