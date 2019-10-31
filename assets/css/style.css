@@ -237,7 +237,7 @@ body {
 	color: rgb(172, 130, 166);
 	background-color: #382035;
 	border-radius: 0;
-	text-transform: capitalize;
+	text-transform: none;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
@@ -826,7 +826,7 @@ ul li a#collapsed-sidebar-toggle-button i,
 	padding: 7px 20px;
 	font-family: Arial, Helvetica, sans-serif;
 	border-left: 3px solid transparent;
-	text-transform: capitalize;
+	text-transform: none;
 }
 
 .header-right .user-profile-area .dropdown-item:hover {
@@ -4395,7 +4395,7 @@ input,
 .input-group-text .form-control .form-control-sm{
 	color: #764F71;
 	border-radius: 0;
-	text-transform: lowercase!important;
+	text-transform: none!important;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
@@ -4426,6 +4426,36 @@ input,
 	border:none!important;
 }
 
+.form-control_otp{
+	margin:0;
+	background: #382035;
+	color:#fff;
+	padding-right:40px;
+	padding-left:40px;  
+	border-radius:5px;
+	border-left:0; 
+	text-transform: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.form-control_otp:hover{
+	margin:0;
+	background: #382035;
+	color:#fff;
+	padding-right:40px;
+	padding-left:40px;  
+	border-radius:20px;
+	border-left:0; 
+	text-transform: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
 input,
 .input-group>.custom-file,
 .input-group>.custom-select,
@@ -4440,7 +4470,7 @@ input,
 	background: #EBEBEB;
 	border-radius: 5px!important;
 	box-shadow: none;
-	text-transform: lowercase;
+	text-transform: none;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
@@ -4456,7 +4486,7 @@ input:hover,
 	-webkit-box-shadow: 0 3px 3px #d49dcd;
     -moz-box-shadow: 0 3px 3px #d49dcd;
     box-shadow: 0 3px 3px #d49dcd;
-	text-transform: lowercase;
+	text-transform: none;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
@@ -4481,7 +4511,24 @@ input:hover,
 .sizz{
 	padding-right: 100px;
 }
-
+.staninfo{
+	border: 1px solid #707070;
+	border-right:none;
+	border-top: none;
+	border-left: none;
+	text-align: left;
+	margin-top:4rem;
+	margin-bottom: 3rem;
+}
+.singupPad{
+	margin-top:13rem;
+}
+.ipcheck{
+	text-align: left;
+}
+.custom-control-input:checked ~ .custom-control-label::before{
+	background-color:#382035!important;
+}
 
 hr {
 	border-top: 1px solid rgba(230, 230, 230, 0.7);
@@ -4535,6 +4582,7 @@ pre {
 
 .custom-control {
 	line-height: 25px;
+	text-align: left;
 }
 
 .custom-checkbox .custom-control-label::before {

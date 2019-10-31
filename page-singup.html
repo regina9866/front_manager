@@ -37,9 +37,12 @@
 <!--================================================-->
       
       <div class="settingUser" id="settingUser">
-           
-            <div class="card shadow-none pd-20 mx-auto wd-280 text-center bd-1 align-self-center singupPad">
-         
+       
+         <button class ="btn"><i class="ion-android-close"></i></button>
+        
+         <div class="wrapper" id="demoSettingSidebarScroll">
+             <div class="card shadow-none pd-20 mx-auto wd-280 text-center bd-1 align-self-center singupPad">
+               <h5 class="staninfo">기본 정보</h5>
                   <form>
                      <p class ="form-control_name">이름</p>
                      <div class="form-group input-group">
@@ -55,7 +58,7 @@
                      </div>
                      <p class ="form-control_name">SMS</p>
                      <div class="form-group input-group">
-                        <input class="form-control sizz" placeholder="010-XXXX-XXXX" type="text">
+                        <input id="sms-input" class="form-control sizz" placeholder="010-XXXX-XXXX" type="text">
                      </div>
                      <p class ="form-control_name">권한</p>
                      <div class="form-group input-group ">
@@ -65,6 +68,11 @@
                            <option>Operator</option>
                         </select>
                      </div>
+                     <p class ="form-control_name">OTP 등록</p>
+                     <div class="form-group input-group">
+                        <input class="form-control sizz" placeholder="OTP" type="text"> 
+                        <button class= "form-control_otp" type="submit"> 등록 </button>
+                     </div>
                      <p class ="form-control_name">비밀번호</p>
                      <div class="form-group input-group">
                         <input class="form-control sizz" placeholder="비밀번호" type="password">
@@ -73,16 +81,27 @@
                      <div class="form-group input-group">
                         <input class="form-control" placeholder="비밀번호 재입력" type="password">
                      </div>
-                     
-                     <div class="form-group">
-                        <button type="submit" class="btn btn-custom-primary btn-block tx-13"> 등록 완료 </button>
-                     </div>
+
+
+                     <h5 class="staninfo">설정</h5>
+
+                     <p class ="form-control_name">IP접근제한</p>
+                     <div class="custom-control custom-checkbox">
+                           <input type="checkbox" class="custom-control-input" id="customCheck1">
+                           <label class="custom-control-label" for="customCheck1">사용</label>
+                        </div>
+                     <div class="form-group input-group">
+                           <input class="form-control" placeholder="IP 등록" type="password">
+                        </div>
                  
                   </form>
-                 
+                  <div class="form-group">
+                        <button type="submit" class="btn btn-custom-primary btn-block tx-13" > 등록 완료 </button>
+                </div>
                </div>
             </div>
       </div>
+     
 
        
 <!--sidebar for Adimn & Operator setting end-->
@@ -115,15 +134,7 @@
                </div>
                <p class ="form-control_name">SMS</p>
                <div class="form-group input-group">
-                  <input class="form-control sizz" placeholder="010-XXXX-XXXX" type="text">
-               </div>
-               <p class ="form-control_name">권한</p>
-               <div class="form-group input-group ">
-                     <select class="form-control optionAO sizz">
-                     <option selected="">권한</option>
-                     <option>Admin</option>
-                     <option>Operator</option>
-                  </select>
+                  <input id="sms-input" class="form-control sizz" placeholder="010-XXXX-XXXX" type="text">
                </div>
                <p class ="form-control_name">비밀번호</p>
                <div class="form-group input-group">
@@ -168,5 +179,11 @@
       <script src="assets/js/jquery.mCustomScrollbar.js"></script>
       <script defer src="assets/js/solid.js"></script>
       <script defer src="assets/js/fontawesome.js"></script> 
+      <script>
+         $('#sms-input').formatter({
+               'pattern': '{{999}}-{{999}}-{{9999}}',
+               'persistent': true
+            });
+      </script>
    </body>
 </html>
