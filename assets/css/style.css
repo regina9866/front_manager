@@ -2426,8 +2426,8 @@ a.btn.btn-label-success:hover {
 
 .btn-stack-overflow {
 	color: #fff;
-	background-color: #fe7a15;
-	border-color: #fe7a15;
+	background-color:#D5D5D5;
+	border-color: #D5D5D5;
 }
 
 .btn-tumblr {
@@ -4414,12 +4414,17 @@ input,
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
 	transition: all 0.3s;
+	vertical-align: middle!important;
 }
-
-
-
-
-
+.form-control_name{
+	color:  #382035;
+	font-weight: 400;
+	text-align: left;	
+	margin-bottom:0; 
+}
+.optionAO{
+	border:none!important;
+}
 
 input,
 .input-group>.custom-file,
@@ -4431,24 +4436,23 @@ input,
 input,
 .custom-file,
 .custom-select,
-.form-control,.input-group {
-	font-size: 13px;
-	border-radius: 3px;
+.input-group {
+	background: #EBEBEB;
+	border-radius: 5px!important;
 	box-shadow: none;
-	border: 1px solid rgba(0, 0, 0, 0.07);
 	text-transform: lowercase;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
 	transition: all 0.3s;
+	vertical-align: middle!important;
 }
 
-input:focus,
-.custom-file:focus,
-.custom-select:focus,
-.form-control:focus
-,.input-group:focus {
-	border-radius: 20px;
+input:hover,
+.custom-file:hover,
+.custom-select:hover,
+.input-group:hover{
+	border-radius: 20px!important;
 	-webkit-box-shadow: 0 3px 3px #d49dcd;
     -moz-box-shadow: 0 3px 3px #d49dcd;
     box-shadow: 0 3px 3px #d49dcd;
@@ -4458,6 +4462,26 @@ input:focus,
 	-ms-transition: all 0.3s;
 	transition: all 0.3s;
 }
+
+.form-control {
+	border-left: none!important;
+	background-color:#EBEBEB;
+	box-shadow: none!important;
+	margin-left: 15px;
+	margin-right: 15px;
+	
+}
+.form-control:focus {
+	border-left: none!important;
+	background-color:#EBEBEB!important;
+	box-shadow: none!important;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.sizz{
+	padding-right: 100px;
+}
+
 
 hr {
 	border-top: 1px solid rgba(230, 230, 230, 0.7);
@@ -5546,10 +5570,11 @@ a:focus {
 ---------------------------------*/
 
 .settingUser {
-    width: 250px;
+    width: 350px;
     position: fixed;
-    top: 0;
-    right: -250px;
+	top: 0;
+	bottom: 0;
+    right: -350px;
     height: 100vh;
     z-index: 999;
     background: #fff;
@@ -5558,7 +5583,7 @@ a:focus {
 }
 
 .settingUser.active {
-    margin-right: 250px;
+    margin-right: 350px;
 }
 
 .settingUser .sidebar-header {

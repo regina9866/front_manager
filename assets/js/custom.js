@@ -64,7 +64,6 @@ $( "document" ).ready( function() {
 	var $mainSidebar = $( "#settingSidebar" );
 
 	$mainSidebar.simplerSidebar( {
-		attr: "sidebar-main",
 		init: "closed",
 		selectors: {
 			trigger: "#settingSidebarTrigger",
