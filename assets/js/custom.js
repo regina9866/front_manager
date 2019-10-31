@@ -97,6 +97,28 @@ $( "document" ).ready( function() {
 		}
 	} );
 } );
+/***************************************************
+****************************************************
+// User Setting sidebar
+****************************************************
+***************************************************/
+$( "document" ).ready( function() {
+	var $mainSidebar = $( "#settingUser" );
+
+	$mainSidebar.simplerSidebar( {
+		attr: "sidebar-main",
+		init: "closed",
+		selectors: {
+			trigger: "#settingUserTrigger",
+			quitter: ".quitter"
+		},
+		animation: {
+			easing: "easeOutQuint"
+		}
+	} );
+} );
+
+
 
 
 /***************************************************

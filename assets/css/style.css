@@ -301,8 +301,16 @@ body {
 .page-container:not(.container) {
 	width: 100%
 }
-
+/*content가 사이즈 변화가 없는거*/
 .page-content {
+	min-height: 60px;
+	vertical-align: bottom;
+	width: 100%;
+	float: right;
+}
+
+/*content가 사이즈 변화가 있는거*/
+.page-content_active {
 	min-height: 60px;
 	vertical-align: bottom;
 	width: calc(100% - 250px);
@@ -5531,6 +5539,106 @@ a:focus {
 .sidebar_sbb_button p{
     color: #ffffff;
 }
+
+
+/*--------------------------------
+사용자 등록/ 수정 팝업
+---------------------------------*/
+
+.settingUser {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: #fff;
+    color: #000000;
+    transition: all 0.3s;
+}
+
+.settingUser.active {
+    margin-right: 250px;
+}
+
+.settingUser .sidebar-header {
+    padding-top: 10%;
+    background: #382035;
+    text-align: center;
+}
+
+.settingUser .sidebar-footer {
+    position: relative;
+    padding: 20px;
+    background: #382035;
+    text-align: center;
+}
+
+.settingUser ul.components {
+    padding: 20px 0;
+   
+}
+
+.settingUser ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+.settingUser ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+
+.settingUser .side-Icon{
+   margin-right: 1rem;
+}
+
+.settingUser_header{
+	margin: 3rem;
+}
+/*------------------------------------------------
+    sidebar_sbb_button
+-------------------------------------------------*/
+.settingUser_button[data-toggle="collapse"] {
+    background:#382035;
+    color: #ffffff;
+    border-radius: 5px 0px 0px 5px;
+    margin:5px;
+    padding: 1rem;
+    padding-bottom: 0;
+    position: absolute;
+    margin-right: 0px;
+    right: 0;
+    top: 50%;
+}
+
+.settingUser_button::after {
+    background:#382035;
+    color: #ffffff;
+    border-radius: 5px 0px 0px 5px;
+    margin:5px;
+    padding: 1rem;
+    padding-bottom: 0;
+    margin-right: 250px;
+    top: 50%;
+    z-index: 10000;
+}
+
+.settingUser_button p{
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 a[data-toggle="collapse"] {
