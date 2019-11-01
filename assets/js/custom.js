@@ -76,6 +76,26 @@ $( "document" ).ready( function() {
 } );
 
 
+/***************************************************
+****************************************************
+// Setting System
+****************************************************
+***************************************************/
+$( "document" ).ready( function() {
+	var $mainSidebar = $( "#systemSetting" );
+
+	$mainSidebar.simplerSidebar( {
+		attr: "sidebar-main",
+		init: "closed",
+		selectors: {
+			trigger: "#systemSettingTrigger",
+			quitter: ".quitter"
+		},
+		animation: {
+			easing: "easeOutQuint"
+		}
+	} );
+} );
 
 
 

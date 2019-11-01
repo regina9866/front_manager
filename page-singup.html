@@ -31,7 +31,8 @@
    <body>
 
         
-      <button type="button" class="btn btn-custom-primary" id="settingUserTrigger"><i class="fas fa-plus"></i></button>
+      <button type="button" class="btn btn-custom-primary" id="settingUserTrigger"><i class="fas fa-plus"></i>사용자 등록</button>
+      <button type="button" class="btn btn-custom-primary" id="systemSettingTrigger"><i class="fas fa-plus"></i> 시스템설정</button>
       
 <!--sidebar for Adimn & Operator setting start-->
 <!--================================================-->
@@ -39,7 +40,9 @@
       <div class="settingUser" id="settingUser">
          <div class="wrapper" id="demoSettingSidebarScroll">
             <!--<i class="ion-ios-close-empty closed-btn"></i>-->
+            
              <div class="card shadow-none pd-20 mx-auto wd-280 text-center bd-1 align-self-center singupPad">
+               <h4 class="sidebar_header">사용자 등록</h4>
                <h5 class="staninfo">기본 정보</h5>
                   <form>
                      <p class ="form-control_name">이름</p>
@@ -66,7 +69,7 @@
                            <option>Operator</option>
                         </select>
                      </div>
-                     <p class ="form-control_name">OTP 등록</p>
+                     <p class ="form-control_name">OTP 인증</p>
                      <div class="form-group input-group">
                         <input class="form-control sizz" placeholder="OTP" type="text"> 
                         <button class= "form-control_otp" type="submit"> 등록 </button>
@@ -105,7 +108,49 @@
 <!--sidebar for Adimn & Operator setting end-->
 <!--================================================-->
            
+    
+<!--sidebar for system setting start-->
+<!--================================================-->
+      
+<div class="systemSetting" id="systemSetting">
+      <div class="wrapper" id="demoSettingSidebarScroll">
+         <!--<i class="ion-ios-close-empty closed-btn"></i>-->
+         
+          <div class="card shadow-none pd-20 mx-auto wd-280 text-center bd-1 align-self-center systemSett_side">
+            <h4 class="sidebar_header">시스템 시스템 설정</h4>
+            <h5 class="staninfo">사용자 설정</h5>
+               <form>
+                  <p class ="form-control_name">암호만료기간</p>
+                  <div class="form-group input-group ">
+                        <select class="form-control optionAO sizz">
+                        <option selected="">3개월</option>
+                        <option>6개월</option>
+                        <option>12개월</option>
+                        <option>24개월</option>
+                     </select>
+                  </div>
 
+                  <p class ="form-control_name">로그인 자동 차단</p>
+                  <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" checked="" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">사용</label>
+                     </div>
+                     <div class="form-group input-group">
+                        <p class="input_text">연속</p><input class="form-control number_input" placeholder="" type="number"><p class="input_text">회 실패시 잠금</p>
+                     </div>
+                  
+               </form>
+               <div class="form-group">
+                     <button type="submit" class="btn btn-custom-primary btn-block tx-13" > 설정 완료 </button>
+             </div>
+            </div>
+         </div>
+   </div>
+  
+
+    
+<!--sidebar for system setting end-->
+<!--================================================-->
       
 <!--contents Main page for Adimn & Operator setting start-->
 <!--================================================-->
@@ -115,8 +160,8 @@
       <div class="ht-100v d-flex">
          
          
-         <div class="card shadow-none pd-20 mx-auto wd-280 text-center bd-1 align-self-center singupPad">
-         
+         <div class="card shadow-none pd-20 mx-auto wd-280 text-center bd-1 align-self-center">
+            <h5 class="staninfo">사용자 설정</h5>
             <form>
                <p class ="form-control_name">이름</p>
                <div class="form-group input-group">
@@ -134,6 +179,10 @@
                <div class="form-group input-group">
                   <input id="sms-input" class="form-control sizz" placeholder="010-XXXX-XXXX" type="text">
                </div>
+               <p class ="form-control_name">기존 비밀번호</p>
+               <div class="form-group input-group">
+                  <input class="form-control sizz" placeholder="기존 비밀번호" type="password">
+               </div>
                <p class ="form-control_name">비밀번호</p>
                <div class="form-group input-group">
                   <input class="form-control sizz" placeholder="비밀번호" type="password">
@@ -142,7 +191,11 @@
                <div class="form-group input-group">
                   <input class="form-control" placeholder="비밀번호 재입력" type="password">
                </div>
-               
+               <p class ="form-control_name">OTP 인증</p>
+                     <div class="form-group input-group">
+                        <input class="form-control" placeholder="OTP" type="text"> 
+                        <button class= "form-control_otp" type="submit"> 인증 </button>
+                     </div>
                <div class="form-group">
                   <button type="submit" class="btn btn-custom-primary btn-block tx-13"> 등록 완료 </button>
                </div>

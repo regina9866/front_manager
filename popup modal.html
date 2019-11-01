@@ -23,6 +23,7 @@
       <link type="text/css" rel="stylesheet" href="assets/plugins/chartist/chartist.css">
       <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
       <link type="text/css" rel="stylesheet" href="assets/css/app.min.css"/>
+   
 
       <!-- Favicon -->	
       <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
@@ -50,12 +51,15 @@
 
                               <!-- button-->
                               <button type="button" class="btn btn-custom-primary" data-toggle="modal" data-target="#m_modal_1">예시 팝업</button>		
-
+                              <button type="button" class="btn btn-custom-primary" data-toggle="modal" data-target="#m_modal_2">첫 로그인시</button>	
+                              <button type="button" class="btn btn-custom-primary" data-toggle="modal" data-target="#m_modal_3">비밀번호 변경필</button>	
+                              <button type="button" class="btn btn-custom-primary" data-toggle="modal" data-target="#m_modal_5">로그인 오류횟수 초과</button>
+                           	
 
                            </div>
                            <div class="card-body collapse show" id="collapse1">
                               
-                              <!--팝업에 들어갈 내용-->
+                              <!--예시팝업에 들어갈 내용-->
                               <div class="modal" id="m_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_1" style="display: none;" aria-hidden="true">
                                  <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -66,7 +70,9 @@
                                           </button>
                                        </div>
                                        <div class="modal-body">
-                                          <p>비밀번호를 변경해주세요.</p>
+                                          <div class="modal_body_contents">
+                                             <p class="modal_body_contents_text">비밀번호를 변경해주세요.</p>
+                                          </div>
                                        </div>
                                        <div class="modal-footer">
                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
@@ -76,73 +82,148 @@
                                  </div>
                               </div>
 
+                              
+                              <!--기존 비밀번호 변경을 위해 나오는 팝업 Start-->
 
 
+                              <div class="modal" id="m_modal_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_1" style="display: none;" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             <h2 class="modal-title" id="exampleModalLabel_1">First Login</h2>
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                             <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                                             </button>
+                                          </div>
+                                          <div class="modal-body">
+                                             <div class="modal_body_contents">
+                                                <p class="modal_body_contents_text"><strong>안녕하세요, OOO님</strong><br> 최조 접속하셨습니다.<br>기존 비밀번호를 바꿔주세요.</p>
+                                                <div class="modal_body_imput">
+                                                   <p class ="form-control_name"><strong>기존 비밀번호 변경</strong></p>
+                                                   <div class="form-group input-group">
+                                                      <input class="form-control sizz" placeholder="비밀번호" type="password">
+                                                   </div>
+                                                   
+                                                   <div class="form-group input-group">
+                                                      <input class="form-control" placeholder="비밀번호 재입력" type="password">
+                                                   </div>
+                                                   <div class="form-group input-group">
+                                                         <input class="form-control sizz" placeholder="OTP" type="text"> 
+                                                         <button class= "form-control_otp" type="submit">OTP인증</button>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                                             <button type="button" class="btn btn-primary">완료</button>
+                                          </div>
+                                          
+                                          
+                                       </div>
+                                    </div>
+                                 </div>
+                           <!--기존 비밀번호 변경을 위해 나오는 팝업 end-->
+                                 
+                           
+                           <!--비밀번호 변경주기 초과시 나오는 팝업 Start-->
+
+                           <div class="modal" id="m_modal_3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_1" style="display: none;" aria-hidden="true">
+                                 <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                       <div class="modal-header">
+                                          <h2 class="modal-title" id="exampleModalLabel_1">Alert Alarm</h2>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                                          </button>
+                                       </div>
+                                       <div class="modal-body">
+                                             <div class="modal_body_contents">
+                                                <p class="modal_body_contents_text"><strong>안녕하세요, OOO님</strong><br>비밀번호 변경 주기가 초과되었습니다.<br>비밀번호를 변경해주세요!</p>
+                                             </div>
+                                       </div>
+                                       
+                                       <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#m_modal_4">변경</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>
-                     <!--나중에 쓸까 싶어서 남겨두는 pop 스타일 -->
-                     <!-- Bootstrap SweetAlert Modal Start -->
-                     <!--================================-->
-                     <!--<div class="col-md-12 col-lg-12">
-                        <div class="card mg-b-20">
-                           <div class="card-header">
-                              <h4 class="card-header-title">
-                                 Bootstrap SweetAlert Modal
-                              </h4>
-                             
-                           </div>
-                           <div class="card-body collapse show" id="collapse3">
-                              <table class="table table-bordered">
-                                 <tbody>
-                                    <tr>
-                                       <td style="width: 30%">Basic Modal</td>
-                                       <td>
-                                          <button class="btn btn-lg btn-primary" id="sweetalert-example-1">Launch Modal</button>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td style="width: 30%">Full Modal</td>
-                                       <td>
-                                          <button class="btn btn-lg btn-secondary" id="sweetalert-example-2">Launch Modal</button>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td style="width: 30%">Loader Modal</td>
-                                       <td>
-                                          <button class="btn btn-lg btn-teal" id="sweetalert-example-3">Launch Modal</button>	
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td style="width: 30%">Info Modal</td>
-                                       <td>
-                                          <button class="btn btn-lg btn-custom-primary" id="sweetalert-example-4">Launch Modal</button>	
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td style="width: 30%">Success Modal</td>
-                                       <td>
-                                          <button class="btn btn-lg btn-success" id="sweetalert-example-5">Launch Modal</button>	
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td style="width: 30%">Warning Modal</td>
-                                       <td>
-                                          <button class="btn btn-lg btn-warning" id="sweetalert-example-6">Launch Modal</button>	
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td style="width: 30%">Danger Modal</td>
-                                       <td>
-                                          <button class="btn btn-lg btn-danger" id="sweetalert-example-7">Launch Modal</button>	
-                                       </td>
-                                    </tr>
-                                 </tbody>
-                              </table>
+
+                     <div class="modal" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_1" style="display: none;" aria-hidden="true">
+                           <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabel_1">Password Change</h2>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                                    </button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="modal_body_contents">
+                                     <p class="modal_body_contents_text"><strong>비밀번호 변경안내</strong></p>
+                                          <p class="modal_body_contents_text">비밀번호는 9자리 이상 <br>대소문자,숫자,특수문자중 3가지 이상을 포함해야 됩니다.</p>
+                                       <div class="modal_body_imput">
+                                             <div class="form-group input-group">
+                                                   <input class="form-control sizz" placeholder="기존 비밀번호" type="password">
+                                             </div>
+                                          <div class="form-group input-group">
+                                             <input class="form-control sizz" placeholder="비밀번호" type="password">
+                                          </div>
+                                          
+                                          <div class="form-group input-group">
+                                             <input class="form-control" placeholder="비밀번호 재입력" type="password">
+                                          </div>
+                                          <div class="form-group input-group">
+                                                <input class="form-control sizz" placeholder="OTP" type="text"> 
+                                                <button class= "form-control_otp" type="submit">OTP인증</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                                    <button type="button" class="btn btn-primary">완료</button>
+                                 </div>
+                                 
+                                 
+                              </div>
                            </div>
                         </div>
-                     </div>-->
-<!--/ Bootstrap SweetAlert Modal End -->
+
+                     <!--로그인 횟수 초과시 -->
+                     <div class="modal" id="m_modal_5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_1" style="display: none;" aria-hidden="true">
+                           <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabel_1">Alert Alarm</h2>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+                                    </button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="modal_body_contents">
+                                      
+                                    <p class="modal_body_contents_text"><strong> <i class="fas fa-exclamation-circle"></i>로그인 횟수가 OOO회 초과되었습니다.</strong><br>OO초과시 해당계정은 정지됩니다.</p>
+                                       
+                                    </div>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">완료</button>
+                                   
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+
+                     <!--나중에 쓸까 싶어서 남겨두는 pop 스타일 -->
+               
 
 
 
