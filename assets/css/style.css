@@ -4521,7 +4521,7 @@ input:hover,
 	margin-bottom: 3rem;
 }
 .singupPad{
-	margin-top:13rem;
+	margin-top:19rem;
 }
 .ipcheck{
 	text-align: left;
@@ -5631,8 +5631,9 @@ a:focus {
 }
 
 .settingUser.active {
-    margin-right: 350px;
+    right:0;
 }
+
 
 .settingUser .sidebar-header {
     padding-top: 10%;

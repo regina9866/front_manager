@@ -128,6 +128,7 @@ $(document).ready(function() {
             });
         };
         
+        
         fixed_sidebar();
         collapsed_sidebar();
         small_screen_sidebar();

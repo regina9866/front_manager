@@ -76,6 +76,9 @@ $( "document" ).ready( function() {
 } );
 
 
+
+
+
 /***************************************************
 ****************************************************
 // Setting Sidebar Active Js
@@ -101,6 +104,17 @@ $( "document" ).ready( function() {
 // User Setting sidebar
 ****************************************************
 ***************************************************/
+/**$('#sidebarCollapse').on('click', function () {
+    $('#settingUser').addClass('active');
+    $('#settingUser').fadeIn();
+});
+
+$('.closed-btn').on('click', function () {
+    $('#settingUser').removeClass('active');
+    $('#settingUser').fadeOut();
+});**/
+
+
 $( "document" ).ready( function() {
 	var $mainSidebar = $( "#settingUser" );
 
@@ -116,8 +130,6 @@ $( "document" ).ready( function() {
 		}
 	} );
 } );
-
-
 
 
 /***************************************************
